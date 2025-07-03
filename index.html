@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😈 Markush.dlfr | Página Oficial</title>
+    <link rel="icon" type="image/png" href="markush.dlfr/favicon/favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark">
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav>
+        <div class="nav-content" style="height: 40px;">
+            <h1 class="logo">
+              <img src="assets/images/lettering.png" alt="Markush Logo" class="logo-glow" button onclick="scrollToSection('home')"/>
+            </h1>
+            <div class="nav-links">
+                <button onclick="scrollToSection('home')" class="nav-link active">Inicio</button>
+                <button onclick="scrollToSection('playlist')" class="nav-link">Playlist</button>
+                <button onclick="scrollToSection('projects')" class="nav-link">Música</button>
+                <button onclick="scrollToSection('services')" class="nav-link">Biografía</button>
+                <button onclick="scrollToSection('contact')" class="nav-link">Redes</button>
+                </button>
+            </div>
+            <button class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" x2="20" y1="12" y2="12" />
+                    <line x1="4" x2="20" y1="6" y2="6" />
+                    <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <button onclick="scrollToSection('home')" class="nav-link active">Inicio</button>
+            <button onclick="scrollToSection('playlist')" class="nav-link">Playlist</button>
+            <button onclick="scrollToSection('projects')" class="nav-link">Música</button>
+            <button onclick="scrollToSection('services')" class="nav-link">Biografía</button>
+            <button onclick="scrollToSection('contact')" class="nav-link">Redes</button>
+        </div>
+    </nav>
+
+<main>
+    <section id="home" style="position: relative; overflow: hidden; height: 100vh;">
+
+        <!-- Video Background -->
+<div class="background-video">
+  <iframe 
+    src="https://www.youtube.com/embed/Ns0WfHtVhns?autoplay=1&mute=1&loop=1&controls=0&playlist=Ns0WfHtVhns&modestbranding=1&showinfo=0&rel=0"
+    frameborder="0" 
+    allow="autoplay; fullscreen"
+    allowfullscreen 
+    class="background-video">
+  </iframe>
+</div>
+
+        <!-- Filtro gris semitransparente -->
+        <div class="video-overlay"></div>
+
+        <!-- Contenido principal -->
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="hero-grid">
+<a href="https://www.youtube.com/@markushdlfr" target="_blank" aria-label="YouTube">
+    <div class="profile-image-container">
+        <div class="image-backdrop"></div>
+        <img src="assets/images/profile.jpeg" alt="Profile" class="profile-image">
+    </div>
+</a>
+                <div class="hero-content">
+                    <h1>¡Página web oficial de <span class="gradient-text">Markush DLFR</span></h1>
+                    <p></p>
+                    <p>Marco Andrés Arismendi González, conocido artísticamente como Markush DLFR,
+                        es un cantante y creador chileno que combina rap, trap y sonidos urbanos con su estilo fresco y auténtico.</p>
+                    <p></p>
+                    <p>En solo cinco años ha logrado posicionarse como una promesa de la música latina, destacando en plataformas como Spotify, YouTube y TikTok.</p>
+                    <p>Su popularidad también creció gracias a su faceta como streamer, donde se conecta directamente con su comunidad.
+                        Con temas como "Bonita", "Lo Que Vivo", "Gata Nueva" y "Sigo Siendo Yo", su música refleja perseverancia, versatilidad y su sueño de conquistar el escenario mundial.</p>
+
+                    <button onclick="scrollToSection('projects')" class="cta-button">
+                        🎵 ¡Escucha mi música!
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" x2="21" y1="14" y2="3" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    /* Aseguramos que el section tenga al menos la altura de la ventana */
+    #home {
+        height: 100vh; /* altura de la ventana para que el video cubra todo */
+        position: relative;
+        overflow: hidden;
+    }
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh; /* 100 * (16 / 9) para mantener el aspecto del video */
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+    /* Filtro gris semitransparente encima del video */
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(46, 45, 45, 0.74); /* gris con opacidad 0.4 */
+        z-index: 2;
+        pointer-events: none; /* para no bloquear interacciones */
+    }
+
+    /* El contenido debe estar arriba */
+    .container {
+        position: relative;
+        z-index: 3;
+    }
+</style>
+
+<section id="playlist">
+  <div class="spotify-section">
+    <h2 class="spotify-title">PLAYLIST OFICIAL</h2>
+    <div class="spotify-embed-wrapper">
+      <div class="spotify-embed">
+        <iframe 
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2ECQ4J?utm_source=generator&theme=0"
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container" style="position: relative;">
+    <h2 class="section-title glow-text">¡DISFRUTA MI MÚSICA!</h2>
+
+    <div class="projects-grid" style="
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 20px 0;
+    ">
+
+      <!-- CANCIÓN 1 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/48kuHw0VnhsKzQD6cfCNMN?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- CANCIÓN 2 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/6CbVArEfCRaTdC4Ob7tG8r?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- CANCIÓN 3 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/1GPRNNYCvM2Qb9V3UK4b8j?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- CANCIÓN 4 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/5keIWBXq4j6UUmJUY0W0p8?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- CANCIÓN 5 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/2kfLI6IjFWTQnX3l7UAJwI?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- CANCIÓN 6 -->
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/1n6MsUFeL0nZn8odcPlWet?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="project-card" style="min-width: 300px; flex-shrink: 0;">
+        <iframe style="border-radius:12px; pointer-events: auto;"
+          src="https://open.spotify.com/embed/track/5PyjLHLA92v3pYwyuMcK5q?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const container = document.querySelector('.projects-grid');
+  const btnLeft = document.getElementById('scroll-left');
+  const btnRight = document.getElementById('scroll-right');
+  const scrollAmount = 320; // ancho aprox de un proyecto + margen
+
+  btnLeft.addEventListener('click', () => {
+    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  btnRight.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
+<!-- Services -->
+
+<section id="services" class="services">
+    <div class="service-container">
+        <h2 class="section-title glow-text">BIOGRAFÍA</h2>
+        <div class="services-grid">
+            <!-- Introducción -->
+            <div class="service-card slide-left glow-purple">
+                <h3 class="centrado">🌟 Introducción</h3>
+                <p>
+                    Markush DLFR, nombre artístico de Marco Arismendi, es una de las voces más auténticas del género urbano chileno. Nacido con un carácter carismático y rebelde, fue conocido por su actitud bromista que lo llevó a ser expulsado de tres colegios. Sin embargo, su personalidad también se transformó en su mayor herramienta: genuino, cercano y resiliente. Antes de la música, trabajó como guardia de seguridad mientras construía su identidad como creador de contenido y soñador musical.
+                </p>
+            </div>
+
+            <!-- Trayectoria Musical -->
+            <div class="service-card slide-right glow-purple">
+                <h3 class="centrado">🎵 Trayectoria Musical</h3>
+                <p>
+                    Su carrera artística comenzó a consolidarse en 2023 con el lanzamiento de su primer álbum “Empezamos de Cero”, compuesto por trece temas originales. Desde entonces, ha compartido canciones como “Gold”, “Bonita”, “Sigo Siendo Yo” y “Lo Que Vivo”, posicionándose en plataformas digitales con más de 70 000 oyentes mensuales en Spotify. Ha colaborado con talentos como Lil Ros, ElBai, Balbi El Chamako, DrippingBastyGlock y 4peFrank, expandiendo su presencia y demostrando una evolución constante como artista urbano.
+                </p>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <!-- Estilo Musical -->
+            <div class="service-card slide-left glow-purple">
+                <h3 class="centrado">🎧 Estilo Musical</h3>
+                <p>
+                    Su propuesta combina el reguetón con el trap, integrando elementos del hip-hop y letras que relatan vivencias reales. Markush alterna entre temas potentes y bailables y otros más íntimos y emocionales, con letras sobre superación, amor de barrio y luchas personales. Su autenticidad, sumada a un sonido digital moderno y versátil, lo ha convertido en un referente emergente dentro de la escena urbana chilena.
+                </p>
+            </div>
+
+            <!-- Proyección y Futuro -->
+            <div class="service-card slide-right glow-purple">
+                <h3 class="centrado">🚀 Proyección y Futuro</h3>
+                <p>
+                    Gracias al impulso de su comunidad digital que lo apoyó desde sus comienzos como streamer, Markush continúa creciendo en redes y plataformas. Hoy es reconocido por su constancia, su mensaje positivo y su cercanía con el público. Planea expandirse fuera de Chile con colaboraciones internacionales, nuevos lanzamientos y shows en vivo que refuercen su vínculo con la gente. Con humildad y visión, Markush DLFR representa la nueva ola de artistas que triunfan siendo fieles a sí mismos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .services p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.7;
+        color: #ffffff;
+        text-align: justify;
+    }
+</style>
+
+        <!-- Contact section -->
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title glow-text">CONTACTO</h2>
+        <div class="contact-links">
+            <a href="https://www.instagram.com/markush.dlfr/" target="_blank" class="contact-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@markushdlfr" target="_blank" class="contact-link" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://kick.com/markushdlfr" target="_blank" class="contact-link" aria-label="Kick">
+              <img src="assets/images/logo-kick.png" alt="Kick" style="width:24px; height:24px; vertical-align:middle;">
+            </a>
+            <a href="https://soundcloud.com/markushdlfr" target="_blank" class="contact-link" aria-label="SoundCloud">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/4x2bnqnjBvpRLa7JpiLY1h" target="_blank" class="contact-link" aria-label="Spotify">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://music.apple.com/us/artist/markush-dlfr/1531764377" target="_blank" class="contact-link" aria-label="Apple Music">
+                <i class="fab fa-apple"></i>
+            </a>
+            <a href="https://www.deezer.com/es/artist/107083662" target="_blank" class="contact-link" aria-label="Deezer">
+                <i class="fab fa-deezer"></i>
+            </a>
+            <a href="https://www.youtube.com/@markushdlfr" target="_blank" class="contact-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <section class="footer">
+            <footer>
+                <div class="copyrights">
+                    &copy; 2025 <span class="gradient-text">Markush.dlfr</span> Todos los derechos reservados.
+                </div>
+            </footer>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
